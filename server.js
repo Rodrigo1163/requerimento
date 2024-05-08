@@ -22,7 +22,9 @@ app.use(middlWareGlobal);
 // app.use(outroMiddlWare);
 app.use(routes);
 
-app.listen(9082, () => {
+const port = process.env.PORT || 9082;
+
+app.listen(port, () => {
         console.log('Acessar http://localhost:9082')
         console.log('Servidor executando na porta 9082')
 });
